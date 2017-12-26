@@ -1,0 +1,737 @@
+    1  cd
+    2  pwd
+    3  mkdir html
+    4  cd html/
+    5  vi index.html
+    6  sudo apt-get install vim
+    7  vi index.html
+    8  pwd
+    9  sudo docker ps
+   10  ll
+   11  vi index.html 
+   12  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add 
+   13  sudo apt install curl
+   14  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add 
+   15  sudo apt install curl
+   16  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   17  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   18  sudo apt-get update
+   19  apt-cache policy docker-ce
+   20  sudo apt-get install -y docker-ce
+   21  sudo systemctl status docker
+   22  sudo docker -version
+   23  sudo docker version
+   24  sudo docker run -it hello-world
+   25  sudo docker images
+   26  sudo docker pull alpinelinux
+   27  sudo docker pull amitkulkarni1712/build-compose-php7.1
+   28  sudo docker pull amitkulkarni1712/build-compose-php7.1:v3
+   29  sudo docker images
+   30  sudo docker run -itd amitkulkarni1712/build-compose-php7.1 
+   31  sudo docker run -itd amitkulkarni1712/build-compose-php7.1:v3 
+   32  sudo docker ps
+   33  sudo docker exec -it xenodochial_hoover bash
+   34  sudo docker ps
+   35  sudo docker stop 4b05488c93a4
+   36  sudo docker ps
+   37  sudo docker pull ubuntu
+   38  sudo docker images
+   39  sudo docker run -d -v /home/nikhil/html:/var/www/html ubuntu
+   40  sudo docker ps
+   41  sudo docker run -itd -v /home/nikhil/html:/var/www/html ubuntu
+   42  sudo docker ps
+   43  sudo docker exec -it focused_kirch bash
+   44  sudo docker ps
+   45  sudo docker stop 776db717b0b1
+   46  sudo docker images
+   47  sudo docker run -itd -P -v /home/nikhil/html:/var/www/html ubuntu
+   48  sudo docker ps
+   49  sudo docker exec -it agitated_johnson bash
+   50  ll
+   51  sudo docker ps
+   52  sudo docker pull pamtrak06/ubuntu14.04-apache2
+   53  sudo docker images
+   54  sudo docker ps
+   55  sudo docker kill 0a812b98bdff
+   56  sudo docker run -itd -P -v /home/nikhil/html:/var/www/html pamtrak06/ubuntu14.04-apache2:latest
+   57  sudo docker ps
+   58  sudo docker run -it -P -v /home/nikhil/html:/var/www/html pamtrak06/ubuntu14.04-apache2:latest
+   59  sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+   60  sudo apt update && sudo apt install skype
+   61  sudo apt install skype
+   62  ls
+   63  sudo DownloaDS
+   64  sudo Downloads
+   65  skype
+   66  sudo apt install skype
+   67  sudo apt update
+   68  sudo apt install skype
+   69  sudo dpkg -i /home/nikhil/Downloads
+   70  sudo dpkg -i home/nikhil/Downloads
+   71  sudo apt-get install -f
+   72  sudo dpkg -i home/nikhil/Downloads
+   73  sudo dpkg -i /home/nikhil/Downloads
+   74  sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+   75  cd Downloads
+   76  ls ltr
+   77  ls -ltr
+   78  ls 
+   79  sudo dpkg -i google-chrome-stable_current_amd64.deb 
+   80  sudo apt-get update
+   81  sudo apt-get install libappindicator1
+   82  sudo apt-get -f install
+   83  sudo dpkg -i google-chrome-stable_current_amd64.deb
+   84  sudo apt-get update
+   85  sudo apt-get install 
+   86  sudo dpkg -i /home/nikhil/Downloads/skypeforlinux-64.deb 
+   87  sudo apt install slack
+   88  sudo dpkg -i /home/nikhil/Downloads/slack-desktop-3.0.0-amd64.deb
+   89  sudo dpkg -i /home/nikhil/Downloads/slack-desktop-3.0.0-amd64
+   90  cd
+   91  cd Downloads/
+   92  ls -ltr
+   93  sudo dpkg -i slack-desktop-3.0.0-amd64.deb 
+   94  sudo dpkg -if slack-desktop-3.0.0-amd64.deb 
+   95  sudo dpkg -i slack-desktop-3.0.0-amd64.deb 
+   96  sudp apt-get remove slack
+   97  sudo apt-get remove slack
+   98  sudo dpkg -i slack-desktop-3.0.0-amd64.deb 
+   99  ls
+  100  yum
+  101  rpm -a
+  102  rpm -A
+  103  apt install rpm
+  104  sudo rm /var/lib/apt/lists/lock
+  105  apt install rpm
+  106  sudo rm /var/lib/apt/lists/lock
+  107  sudo dpkg --configure -a
+  108  sudo rm /var/lib/apt/lists/lock
+  109  apt install rpm
+  110  rpm -a open ssh
+  111  rpm -a openssh
+  112  sudo apt install rpm
+  113  rpm -a openssh
+  114  rpm -qa
+  115  rpm -qi ssh
+  116  rpm -qi openssh
+  117  rpm - qa
+  118  uname -a
+  119  wget 
+  120  cat /etc/issue
+  121  yum install nano
+  122  sudo apt install yum
+  123  yum install nano
+  124  su
+  125  letmein123
+  126  su
+  127  su root
+  128  sudo su -  
+  129  sudo docker -version
+  130  su root
+  131  sudo su -  
+  132  sudo add-apt-repository -y ppa:webupd8team/java
+  133  sudo apt-get update
+  134  sudo add-apt-repository -y ppa:webupd8team/java
+  135  sudo apt-get -y install oracle-java8-installer
+  136  get -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+  137  wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+  138  echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
+  139  sudo apt-get update
+  140  sudo apt-get -y install elasticsearch
+  141  sudo vi/etc/elasticearch/elasticsearch.yml
+  142  sudo vi/etc/elasticsearch/elasticsearch.yml
+  143  sudo vi /etc/elasticsearch/elasticsearch.yml
+  144  sudo service elasticsearch start
+  145  sudo chkconfig
+  146  adduser
+  147  sudo adduser
+  148  sudo adduser nikhils
+  149  update-rc.d 
+  150  runlevel
+  151  init 3
+  152  sudo init 3
+  153  sudo init 5
+  154  sudo service apache2 start
+  155  sudo apt-get install apache2
+  156  sudo service apache2 start
+  157  vi 10-syslog-filter.conf 
+  158  ll
+  159  vi 02-beats-input.conf 
+  160  sudo vi 02-beats-input.conf 
+  161  sudo service logstash restart
+  162  sudo vi 30-elasticsearch-output.conf 
+  163  sudo service logstash restart
+  164  sudo service logstash stop
+  165  sudo service logstash start
+  166  sudo service logstash status
+  167  curl -XGET 'http://localhost:9200/filebeat-*/_search?pretty'
+  168  curl -XGET 'http://localhost:9200/apache-*/_search?pretty'
+  169  vi 30-elasticsearch-output.conf 
+  170  cd /etc/elasticsearch/
+  171  sudo cd /etc/elasticsearch/
+  172  sudo su -
+  173  curl -XGET 'http://localhost:9200/apache-*/_search?pretty'
+  174  curl -XGET 'http://localhost:9200/apache*/_search?pretty'
+  175  ll
+  176  rm 10-syslog-filter.conf 
+  177  sudo rm 10-syslog-filter.conf 
+  178  sudo service logstash start
+  179  sudo service logstash restart
+  180  curl -XGET 'http://localhost:9200/apache*/_search?pretty'
+  181  vi 02-beats-input.conf 
+  182  sudo vi 02-beats-input.conf 
+  183  sudo service logstash restart
+  184  curl -XGET 'http://localhost:9200/apache*/_search?pretty'
+  185  curl -XGET 'http://localhost:9200/apache*/_search?pretty'curl -XGET 'http://localhost:9200/apache*/_search?pretty'
+  186  curl -XGET 'http://localhost:9200/apache*/_search?pretty'
+  187  curl -XGET 'http://localhost:9200/apache/_search?pretty'
+  188  cd /var/log/apache2/
+  189  ll
+  190  sudo service apache2 status
+  191  sudo vi /etc/apache2/apache2.conf 
+  192  sudo vi /etc/apache2/ports.conf 
+  193  sudo service apache2 start
+  194  sudo service apache2 status
+  195  sudo vi 02-beats-input.conf 
+  196  sudo service logstash restart
+  197  cd /var/log/
+  198  ls -ltr
+  199  cd logstash/
+  200  ll
+  201  ls -ltr
+  202  tail -f logstash.
+  203  tail -f logstash.log 
+  204  ll
+  205  tail -f logstash.log 
+  206  ls -ltr
+  207  tail -f logstash.
+  208  tail -f logstash.log 
+  209  cd ..
+  210  cd apache2/
+  211  ll
+  212  tail -f other_vhosts_access.log 
+  213  ll
+  214  cd ../logstash/
+  215  tail -f logstash.log 
+  216  cd /var/log/apache2/
+  217  ll
+  218  cd ../logstash/
+  219  ls -ltr
+  220  tail -f logstash.
+  221  tail -f logstash.o
+  222  tail -f logstash.log 
+  223  sudo netstat -pant | grep LIST
+  224  sudo netstat -pant | grep 
+  225  sudo netstat -pant 
+  226  sudo netstat -pant | grep 5044
+  227  sudo mkdir -p /etc/pki/tls/certs
+  228  sudo mkdir /etc/pki/tls/private
+  229  sudo vi /etc/ssl/openssl.cnf
+  230  cd /etc/pki/tls
+  231  sudo openssl req -config /etc/ssl/openssl.cnf -x509 -days 3650 -batch -nodes -newkey rsa:2048 -keyout private/logstash-forwarder.key -out certs/logstash-forwarder.crt
+  232  sudo vi /etc/logstash/conf.d/02-beats-input.conf
+  233  sudo vi /etc/logstash/conf.d/10-syslog-filter.conf
+  234  sudo vi /etc/logstash/conf.d/30-elasticsearch-output.conf
+  235  sudo service logstash configtest
+  236  sudo service logstash restart
+  237  sudo update-rc.d logstash defaults 96 9
+  238  cd ~
+  239  curl -L -O https://download.elastic.co/beats/dashboards/beats-dashboards-1.1.0.zip
+  240  sudo apt-get -y install unzip
+  241  unzip beats-dashboards-*.zip
+  242  cd beats-dashboards-*
+  243  ./load.sh
+  244  cd ~
+  245  curl -O https://gist.githubusercontent.com/thisismitch/3429023e8438cc25b86c/raw/d8c479e2a1adcea8b1fe86570e42abab0f10f364/filebeat-index-template.json
+  246  curl -XPUT 'http://localhost:9200/_template/filebeat?pretty' -d@filebeat-index-template.json
+  247  scp /etc/pki/tls/certs/logstash-forwarder.crt user@127.0.0.1:/tmp
+  248  sudo mkdir -p /etc/pki/tls/certs
+  249  sudo cp /tmp/logstash-forwarder.crt /etc/pki/tls/certs/
+  250  cd /etc/pki/tls
+  251  sudo openssl req -subj '/CN=localhost/' -x509 -days 3650 -batch -nodes -newkey rsa:2048 -keyout private/logstash-forwarder.key -out certs/logstash-forwarder.crt
+  252  echo "deb https://packages.elastic.co/beats/apt stable main" |  sudo tee -a /etc/apt/sources.list.d/beats.list
+  253  wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+  254  sudo apt-get update
+  255  sudo apt-get install filebeat
+  256  sudo vi /etc/filebeat/filebeat.yml
+  257  sudo systemctl restart filebeat
+  258  sudo systemctl enable filebeat
+  259  curl -XGET 'http://localhost:9200/filebeat-*/_search?pretty'
+  260  sudo systemctl status filebeat
+  261  sudo vi /etc/filebeat/filebeat.yml
+  262  sudo systemctl start filebeat
+  263  sudo systemctl status filebeat
+  264  cd /etc/logstash/
+  265  ll
+  266  cd conf.d/
+  267  ll
+  268  vi 02-beats-input.conf 
+  269  sudo vi 02-beats-input.conf 
+  270  sudo vi 10-syslog-filter.conf 
+  271  sudo vi 30-elasticsearch-output.conf 
+  272  sudo service logstash start
+  273  sudo service logstash status
+  274  sudo service kibana restart
+  275  sudo service elasticsearch restart
+  276  vi 30-elasticsearch-output.conf 
+  277  top
+  278  curl -L -O https://download.elastic.co/beats/topbeat/topbeat_1.3.1_amd64.deb
+  279  sudo curl -L -O https://download.elastic.co/beats/topbeat/topbeat_1.3.1_amd64.deb
+  280  sudo dpkg -i topbeat_1.3.1_amd64.deb
+  281  cd
+  282  date
+  283  time
+  284  who
+  285  w
+  286  cal
+  287  cat /proc/cpuinfo 
+  288  cat /proc/meminfo 
+  289  free -g
+  290  free -m
+  291  sudo apt-get install htop
+  292  sudo systemctl 
+  293  sysv-rc-conf --list
+  294  sudo sysv-rc-conf --list
+  295  sudo systemctl enable elasticsearch
+  296  sudo sysv-rc-conf --list
+  297  sudo systemctl enable --help
+  298  sudo systemctl enable --runlevel 5
+  299  sudo systemctl enable -runlevel 5
+  300  sudo service elasticsearch start
+  301  echo "deb http://packages.elastic.co/kibana/4.5/debian stable main" | sudo tee -a /etc/apt/sources.list
+  302  cd /etc/apt/sources.list.d/
+  303  ll
+  304  echo "deb http://packages.elastic.co/kibana/4.5/debian stable main" | sudo tee -a /etc/apt/sources.list
+  305  ls -l
+  306  sudo apt-get update
+  307  sudo apt-get -y install kibana
+  308  sudo nano /opt/kibana/config/kibana.yml
+  309  sudo vim /opt/kibana/config/kibana.yml
+  310  sudo systemctl enable kibana
+  311  sudo systemctl start kibana
+  312  sudo systemctl status kibana
+  313  sudo apt-get -y install nginx
+  314  sudo -v
+  315  echo "kibanaadmin:`openssl passwd -apr1`" | sudo tee -a /etc/nginx/htpasswd.users
+  316  sudo vim /etc/nginx/sites-available/default
+  317  sudo nginx -t
+  318  sudo systemctl restart nginx
+  319  sudo ufw allow 'Nginx Full
+  320  '
+  321  sudo ufw allow 'Nginx Full'
+  322  cd /etc/elasticsearch/
+  323  sudo nano /etc/elasticsearch/elasticsearch.yml
+  324  sudo vim /etc/elasticsearch/elasticsearch.yml
+  325  sudo apt install logstash
+  326  echo "deb http://packages.elastic.co/logstash/2.3/debian stable main" | sudo tee -a /etc/apt/sources.list
+  327  sudo apt-get update
+  328  sudo apt-get install logstash
+  329  sudo logstash start
+  330  sudo service logstash start
+  331  sudo /opt/logstash/bin/logstash-plugin install logstash-input-beats
+  332  sudo vi  /etc/logstash/conf.d/logstash.conf
+  333  ifconfig
+  334  cd /var/log/
+  335  ls -ltr
+  336  cd logstash/
+  337  ls -ltr
+  338  tail -f logstash.
+  339  tail -f logstash.log 
+  340  cd ..
+  341  ls -ltr
+  342  cd /etc/logstash/
+  343  cd conf.d/
+  344  ll
+  345  vi 02-beats-input.conf 
+  346  sudo vi 02-beats-input.conf 
+  347  sudo service logstash start
+  348  ll
+  349  vi 30-elasticsearch-output.conf 
+  350  sudo vi 30-elasticsearch-output.conf 
+  351  sudo service elasticsearch stop
+  352  sudo /etc/init.d/elasticsearch start
+  353  ll
+  354  cd ..
+  355  ll
+  356  cd  conf.d/
+  357  ll
+  358  rm -rf 02-beats-input.conf 30-elasticsearch-output.conf 
+  359  sudo rm -rf 02-beats-input.conf 30-elasticsearch-output.conf 
+  360  vi input.conf
+  361  sudo vi input.conf
+  362  sudo /etc/init.d/logstash stop
+  363  sudo /etc/init.d/logstash start
+  364  sudo vi input.conf
+  365  sudo /etc/init.d/logstash restart
+  366  sudo vi input.conf
+  367  sudo /etc/init.d/logstash restart
+  368  sudo vi input.conf
+  369  sudo /etc/init.d/logstash restart
+  370  sudo systemctl start kibana
+  371  java -version
+  372  sudo systemctl enable elasticsearch
+  373  cd /etc/logstash/conf.d/
+  374  ll
+  375  vi input.conf 
+  376  sudo vi input.conf 
+  377  ll
+  378  /etc/init.d/logstash stop
+  379  sudo /etc/init.d/logstash stop
+  380  sudo /etc/init.d/logstash start
+  381  /etc/init.d/logstash -f input.conf
+  382  sudo /etc/init.d/logstash -f input.conf
+  383  sudo netstat -pant | grep LIST
+  384  vi input.conf 
+  385  sudo vi input.conf 
+  386  sudo /etc/init.d/logstash restart
+  387  sudo vi input.conf 
+  388  sudo service logstash configtest
+  389  sudo service logstash restart
+  390  cd /var/log/logstash/
+  391  ls -ltr
+  392  tail -f logstash.log 
+  393  sudo service apache2 start
+  394  tail -f logstash.log 
+  395  cd /var/log/
+  396  ls -ltr
+  397  cd apache2/
+  398  ll
+  399  sudo /etc/init.d/logstash restart
+  400  history
+  401  ls -ltr
+  402  sudo systemctl enable kibana
+  403  sudo nano /etc/nginx/sites-available/default
+  404  cd /etc/elasticsearch/
+  405  sudo cd /etc/elasticsearch/
+  406  sudo su -
+  407  sudo nano /etc/nginx/sites-available/default~
+  408  sudo nginx -t
+  409  sudo systemctl restart nginx
+  410  sudo ufw allow 'Nginx Full'
+  411  echo "deb http://packages.elastic.co/logstash/2.3/debian stable main" | sudo tee -a /etc/apt/sources.list
+  412  sudo apt-get update
+  413  sudo apt-get install logstash
+  414  sudo mkdir -p /etc/pki/tls/certs
+  415  sudo mkdir /etc/pki/tls/private
+  416  sudo nano /etc/ssl/openssl.cnf
+  417  /var/log
+  418  wc -l /var/log/syslog
+  419  /var/log/syslog 
+  420  sudo root 
+  421  sudo root
+  422  letmein123
+  423  /var/log/syslog 
+  424  udo gedit /var/log/syslog
+  425  sudo gedit /var/log/syslog
+  426  cd /var/log/
+  427  ls -ltr
+  428  ls -ltrh
+  429  sudo du -
+  430  sudo su -
+  431  cd
+  432  curl -L -O https://download.elastic.co/beats/topbeat/topbeat_1.3.1_amd64.deb
+  433  sudo dpkg -i topbeat_1.3.1_amd64.deb
+  434  cd /etc/topbeat/
+  435  ll
+  436  vi topbeat.
+  437  sudo vi topbeat.yml 
+  438  topbeat -configtest -e
+  439  topbeat -configtest -e.
+  440  topbeat -configtest -e
+  441  sudo vi topbeat.yml 
+  442  curl -XPUT 'http://localhost:9200/_template/topbeat' -d@/etc/topbeat/topbeat.template.json
+  443  sudo /etc/init.d/topbeat start
+  444  curl -XGET 'http://localhost:9200/topbeat-*/_search?pretty'
+  445  sudo service elasticsearch start
+  446  sudo service kibana start
+  447  curl -XGET 'http://localhost:9200/topbeat-*/_search?pretty'
+  448  top
+  449  stress-ng --class cpu --sequential 0 -t 60 -v
+  450  sudo spt-get install stress-ng
+  451  sudo apt-get install stress-ng
+  452  stress-ng --class cpu --sequential 0 -t 60 -v
+  453  apt-get install filebeat
+  454  sudo apt-get install filebeat
+  455  cd ../filebeat/
+  456  ll
+  457  vi filebeat.yml 
+  458  mv /etc/filebeat/filebeat.yml /tmp
+  459  sudo mv /etc/filebeat/filebeat.yml /tmp
+  460  ll
+  461  sudo vi filebeat.yml
+  462  service filebeat restart
+  463  cat /var/lib/filebeat/registry 
+  464  sudo vi filebeat.yml
+  465  /etc/init.d/filebeat resart
+  466  /etc/init.d/filebeat restart
+  467  cd /var/log/
+  468  ls -ltr
+  469  tail -f syslog
+  470  /etc/init.d/filebeat restart
+  471  cat /var/lib/filebeat/registry 
+  472  ls -ltr
+  473  cd elasticsearch/
+  474  ls -ltr
+  475  tail -f elasticsearch.log
+  476  sudo netstat -pant | grep LIST
+  477  sudo netstat -pant 
+  478  sudo netstat -pant | grep log
+  479  filebeat setup --template -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["localhost:9200"]'
+  480  cd /etc/filebeat/
+  481  filebeat setup --template -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["localhost:9200"]'
+  482  ll
+  483  filebeat setup --template -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["localhost:9200"]'
+  484  ll
+  485  sudo vi filebeat.
+  486  sudo vi filebeat.yml 
+  487  filebeat setup --template -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["localhost:9200"]'
+  488  sudo /etc/init.d/filebeat restart
+  489  sudo vi filebeat.yml 
+  490  filebeat -c filebeat.yml 
+  491  sudo filebeat -c filebeat.yml 
+  492  sudo vi filebeat.yml 
+  493  sudo filebeat -c filebeat.yml 
+  494  cd /var/log/apache2/
+  495  ll
+  496  tail -f other_vhosts_access.log 
+  497  top
+  498  ps -ef | grep libre
+  499  ps
+  500  ps -ef
+  501  kill 4341
+  502  cd Downloads/
+  503  ls -ltr
+  504  sudo dpkg -i virtualbox-5.2_5.2.2-119230_Ubuntu_yakkety_amd64.deb 
+  505  sudo apt-get install libpng16-16
+  506  sudo apt-get -f install
+  507  sudo dpkg -i virtualbox-5.2_5.2.2-119230_Ubuntu_yakkety_amd64.deb 
+  508  sudo apt-get -f install
+  509  sudo apt-get install virtualbox
+  510  sudo apt-get install vagrant
+  511  cd
+  512  ll
+  513  vi Vagrantfile
+  514  sudo vagrant up
+  515  openssl 
+  516  ssh-keygen 
+  517  ls -ltr
+  518  pwd
+  519  sudo vagrant up
+  520  virtualbox 
+  521  sudo virtualbox
+  522  sudo vagrant status
+  523  sudo vagrant status
+  524  sudo vagrant ssh kube-01
+  525  ls -ltr
+  526  ls -ltr
+  527  vi Vagrantfile 
+  528  free -m
+  529  ssh vagrant@172.20.0.101
+  530  sudo vagrant status
+  531  sudo vagrant box
+  532  sudo vagrant box remove
+  533  sudo vagrant box remove --all -f
+  534  sudo vagrant box remove --all 
+  535  sudo vagrant status
+  536  sudo vagrant box remove 
+  537  sudo vagrant
+  538  sudo vagrant global-status
+  539  sudo vagrant box remove 3b79909
+  540  ssh master@10.2.0.15
+  541  ping 10.0.2.15
+  542  sudo apt-get update
+  543  sudo apt-get install software-properties-common
+  544  sudo apt-add-repository ppa:ansible/ansible
+  545  sudo apt-get update
+  546  sudo apt-get install ansible
+  547  ssh-keygen
+  548  .cd home
+  549  cd home
+  550  ll
+  551  sudo vagrant up
+  552  ls
+  553  sudo vagrant up
+  554  sudo vagrant status
+  555  sudo vagrant start
+  556  sudo vagarant box start
+  557  sudo vagrant box start
+  558  sudo virtualbox
+  559  ll
+  560  ssh-keygen
+  561  ssh-keygen -t rsa -C 
+  562  mkdir ~/.ssh
+  563  cd ~/.ssh
+  564  nano id_rsa.pub
+  565  chmod 644 id_rsa.pub
+  566  cat ~/.ssh/id_rsa
+  567  cd..
+  568  cd
+  569  ansible --version 
+  570  ls
+  571  ls a
+  572  ls -a
+  573  ls
+  574  scp id_rsa.pub  192.168.2.105/home/
+  575  cd
+  576  ping
+  577  my ip 
+  578  ip
+  579  ping ip
+  580  sudo su -
+  581  exit
+  582  ssh vagrant@172.20.0.102
+  583  ssh vagrant@172.20.0.103
+  584  l
+  585  ifconfig
+  586  sudo service sshd start
+  587  sudo apt-get install ssh*
+  588  sudo service sshd start
+  589  sudo service sshd stop
+  590  sudo service sshd start
+  591  sudo service sshd stop
+  592  sudo service sshd start
+  593  ll
+  594  vi V
+  595  vi Vagrantfile 
+  596  pwd
+  597  ssh-keygen 
+  598  vi Vagrantfile 
+  599  ssh-keygen 
+  600  ls -ltr
+  601  sudo rm -rf kube*
+  602  ssh-keygen 
+  603  ls -ltr
+  604  sudorm -rf kube.pub.pub 
+  605  sudo rm -rf kube.pub.pub 
+  606  sudo rm -rf kube.pub 
+  607  ls -ltr
+  608  ssh-keygen 
+  609  ls -ltr
+  610  sudo vagrant up
+  611  sudo virtualbox 
+  612  sudo vagrant status
+  613  sudo vagrant ssh ansible-01
+  614  ssh vagrant@172.17.0.1
+  615  sudo vagrant status
+  616  sudo virtualbox 
+  617  sudo vagrant status
+  618  sudo vagrant ssh ansible-01
+  619  ssh vagrant@172.20.0.101
+  620  ssh-keygen -f "/home/nikhil/.ssh/known_hosts" -R 172.20.0.101
+  621  ssh vagrant@172.20.0.101
+  622  ssh -keygen
+  623  ssh-keygen
+  624  ssh vagrant@172.20.0.102
+  625  ssh vagrant@172.20.0.101
+  626  sudo su-
+  627  sudo -su
+  628  sudo su-
+  629  sudo su -
+  630  vagrant version 
+  631  roo -su
+  632  root -su
+  633  su- roo
+  634  su- root
+  635  root
+  636  vagrant --version
+  637  rm -rf /opt/vagrant
+  638  vagrant --version
+  639  rm -rf /opt/vagrant
+  640  rm -f /usr/bin/vagrant
+  641  sudo
+  642  sudo roor
+  643  sudo root
+  644  vagrant --version
+  645  root
+  646  sudo apt install root-system-bin
+  647  sudo su-
+  648  letmein123
+  649  sudo su-
+  650  sudo su -
+  651  sudo apt-get remove --auto-remove vagrant
+  652  sudo virtual box
+  653  sudo virtualbox
+  654  sudo apt-get install vagrant
+  655  vagrant --version
+  656  mkdir new_VM
+  657  ls
+  658  cd new_VM/
+  659  vagrant init
+  660  sudo su-
+  661  sudo su -
+  662  vagrant init
+  663  sudo vagrant init
+  664  ls
+  665  cat Vagrantfile 
+  666  Vagrant.configure(2) do |config|
+  667  Vagrant.configure do |config| :qw
+  668  :qw
+  669  :wq
+  670  cat Vagrantfile 
+  671  Vagrant.configure do |config
+  672  Vagrant.configure do |config| cat Vagrantfile 
+  673  sudo vi vagranfile 
+  674  cd..
+  675  cd ..
+  676  ls -ltr
+  677  vi Vagrantfile 
+  678  mv Vagrantfile new_VM/
+  679  sudo mv Vagrantfile new_VM/
+  680  cd new_VM/
+  681  sudo vagrant up
+  682  ssh-keygen
+  683  ls
+  684  sudo vagrant up
+  685  sudo vagrant ssh
+  686  vagrant up
+  687  sudo vagrant up 
+  688  $ vagrant up
+  689  ls
+  690  cd new_VM/
+  691  sudo vagrant up 
+  692  sudo vagrant start
+  693  sudo
+  694  sudo vagrant start
+  695  sudo su-
+  696  sudo su -
+  697  sudo vagrant status
+  698  sudo vagrant --help
+  699  sudo vagrant box --help
+  700  sudo vagrant resume --help
+  701  sudo vagrant resume 
+  702  sudo vagrant --help
+  703  sudo vagrant resume ansible-03
+  704  sudo vagrant halt --all
+  705  sudo vagrant halt --all -f
+  706  sudo vagrant halt 
+  707  sudo vagrant status
+  708  sudo vagrant resume 
+  709  sudo vagrant status
+  710  sudo vagrant up
+  711  sudo vagrant status
+  712  sudo vagrant halt 
+  713  sudo vagrant status
+  714  export SSH_AUTH_SOCK=""
+  715  sudo vagrant up
+  716  sudo vagrant status
+  717  sudo vagrant halt
+  718  ll
+  719  sudo virtualbox 
+  720  sudo vagrant status
+  721  sudo vagrant ssh ansible-01
+  722  vagrant --version
+  723  sudo vagrant ssh ansible-01
+  724  sudo virtualbox sudo vagrant ssh ansible-01
+  725  sudo vagrant ssh ansible-01
+  726  sudo virtualbox 
+  727  sudo vagrant ssh ansible-01
+  728  sudo virtualbox 
+  729  ssh vagrant@172.20.0.102
+  730  ssh-keygen -f "/home/nikhil/.ssh/known_hosts" -R 172.20.0.102
+  731  ssh vagrant@172.20.0.102
+  732  exit
+  733  history command
+  734  history | grep vagrant
+  735  history command
+  736  history commandhistory > commands.out
+  737  history > commands.out
