@@ -1,0 +1,31 @@
+---
+- name: This will install Mongo on my web machine
+  hosts: web
+  tasks:
+
+
+
+  - name: install NTP
+    apt: package=ntp state=present update_cache=yes
+
+  - name: Make sure NTP is started up
+    service: name=ntp state=started enabled=yes
+
+
+  - name: get apt key
+    apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=EA312927
+
+  - name: add to mongodb-org-3.2.list
+    lineinfile: dest=/etc/apt/sources.list.d/mongodb-org-3.2.list line="deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse"
+
+  - name: install mongo db
+    apt: name=mongodb-org update_cache=yes
+
+  - name: Add user
+    action: user name=deployer password=mypassword
+
+
+
+
+
+    

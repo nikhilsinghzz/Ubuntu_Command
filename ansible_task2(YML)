@@ -1,0 +1,16 @@
+#######ansible kick out#########
+go to the virtual machine folder $ cd new_VM/
+ssh vagrant@172.20.0.101
+
+
+##########convert the user into root##########
+vagrant@ansible-01:~$ sudo su-
+
+
+############ ansible file (edit) ########
+vim apache.yml 
+
+(i=insert) (esc+ : + wq)= save
+
+####### to triggre ansible filr ####
+ansible-playbook ansible.yml
