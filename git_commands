@@ -1,0 +1,73 @@
+/****** This is to clone Repository*****
+ git clone https://github.com/nikhilsinghzz/Ubuntu_Command.git
+
+*** ENTER INSIDE THE FOLDER *****
+cd Ubuntu_Command/
+
+Note:- if the required file is in diffrent location use this 
+mv<space>../filename<space>.
+check the files using "ls"
+
+******check git status*****
+git status 
+
+
+*****add elements to git*****
+git add*
+git commit -m "added commands" 
+
+***** the machine will ask you *** Please tell me who you are****
+ git config --global user.email "nikhilsinghz@yahoo.com"
+
+
+**** again repeat- git commit ****
+git commit -m "added commands" 
+
+
+***pushing committs****
+git push
+
+Note :- enter desired credentials and done 
+
+***now push the commit**** 
+git push origin master
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++
+
+---
+- name: Ansible task
+  hosts: web
+  tasks:
+
+  - name: install NTP on the server
+    apt: package=ntp state=present update_cache=yes
+
+  - name: Make sure NTP is started up
+    service: name=ntp state=started enabled=yes
+
+  - name: Add nginx Repo
+    apt_repository: repo='ppa:nginx/stable' state=present
+    register: ppainstalled
+
+  - name: Install Nginx
+    apt: name=nginx state=latest update_cache=true
+
+  - name: change port
+    copy: src=default dest=/etc/nginx/sites-enabled/default
+
+  - name: Start Nginx service
+    service: name=nginx enabled=yes state=restarted
+
+
+~                                                                                                                                               
+~                                                                                                                                               
+~                                                            
+
+
+
+
+
+
+
