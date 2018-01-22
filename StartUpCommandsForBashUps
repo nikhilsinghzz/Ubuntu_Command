@@ -1,0 +1,16 @@
+######Application or code required to run on start up######
+PS:- on your CLI screen , you should be on on main folder.
+& then Run this command.
+
+vi .bashrc
+
+####### 2 ##########
+Paste the desired command code (you want to excute) at the bottom just after last(esac) line.
+(in insert mode (use i)paste the code and and then save the page (use (esc --> :wq --> Enter ).
+
+now your ready to go !
+restart and check ! 
+
+Thanks ! 
+
+
