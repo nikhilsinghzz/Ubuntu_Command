@@ -58,3 +58,16 @@ sudo apt-get update
 sudo apt-get install php7.2-cli -y
 
 ####Installing Sublime #####
+echo " installing sublime"
+sudo apt-get update
+sudo apt-get install sublime-text
+
+
+######install firefox #####
+
+sudo apt-add-repository ppa:ubuntu-mozilla-daily/ppa -y
+sudo apt-get update
+
+sudo apt-get install firefox
+
+
