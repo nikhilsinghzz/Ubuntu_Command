@@ -1,12 +1,9 @@
-#/bin/bash
-
-
+#!/bin/bash
 
 ####Skype######
-echo " installing sype"
+echo "installing sype"
 sudo apt update
 wget https://go.skype.com/skypeforlinux-64.deb
-
 sudo dpkg -i skypeforlinux-64.deb
 
 
@@ -15,26 +12,20 @@ echo " installng slack "
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.0.5-amd64.deb
 sudo dpkg -i slack-desktop-3.0.5-amd64.deb
 
-
-
 ####PhpStorm### 
-echo " installing Git"
 
 Install dependencies
-sudo apt-get purge openjdk*
-sudo add-apt-repository ppa:webupd8team/java
+isudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update
 sudo apt-get install oracle-java8-installer oracle-java8-set-default -y
 
 sudo snap install phpstorm --classic
 
-###### GIT ######
-echo " installing git"
-sudo apt-get update
-sudo apt-get install git -y
 
 ###### Docker #######
+
 echo " installing docker"
+sudo apt-get install curl -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt-get update
@@ -51,14 +42,16 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 
 
-###### PHP 7.2 #####
+####### PHP 7.2 #####
 echo " installing php7.2"
-sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 sudo apt-get install php7.2-cli -y
 
 ####Installing Sublime #####
 echo " installing sublime"
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - 
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
 
