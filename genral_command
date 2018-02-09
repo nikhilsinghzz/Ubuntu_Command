@@ -1,0 +1,12 @@
+ 
+ ###### To remove#####
+ rm .install.sh.sw*
+ 
+ 
+admindja09@admindja09-OptiPlex-3050:~$ vi install.sh
+
+##### exceutable permit ####
+admindja09@admindja09-OptiPlex-3050:~$ chmod +x install.sh 
+
+##### trigger file command####
+admindja09@admindja09-OptiPlex-3050:~$ ./install.sh 
