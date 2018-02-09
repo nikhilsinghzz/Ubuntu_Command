@@ -1,5 +1,10 @@
 #!/bin/bash
 
+### install curl ##
+sudo apt-get update
+sudo apt-get install vim curl -y
+
+
 ####Skype######
 echo "installing sype"
 sudo apt update
