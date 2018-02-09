@@ -28,7 +28,7 @@ sudo snap install phpstorm --classic
 
 
 ###### Docker #######
-
+sudo apt-get -f install -y
 echo " installing docker"
 sudo apt-get install curl -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
