@@ -1,0 +1,31 @@
+############### CD to your Project ############
+nikhil@nikhil:~/Desktop/dev/pmanager2$
+
+########### Now Run this Command ############
+nikhil@nikhil:~/Desktop/dev/pmanager2$ cat ../docker-development/docker/pmanager/php-fpm/Dockerfile
+
+################## next Run this command #####################
+nikhil@nikhil:~/Desktop/dev/pmanager2$ sudo curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer && sudo chmod +x /usr/local/bin/composer
+
+############# Insatall Composer #############
+composer install
+
+###############3 go to the git branch ########
+git branch
+
+########### take checkout ######
+git checkout PMAN-702
+
+########## take git stash #######
+nikhil@nikhil:~/Desktop/dev/pmanager2$ git stash
+
+########### take checkout #####
+git checkout PMAN-702
+
+###### take pull of the same branch ####
+git pull origin PMAN-702
+
+###### again install composer ####
+sudo composer install
+
+
