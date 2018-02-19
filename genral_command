@@ -3,6 +3,11 @@
  rm .install.sh.sw*
  
  
+
+
+######### setup install ######
+sudo apt-get install vim-y
+
 admindja09@admindja09-OptiPlex-3050:~$ vi install.sh
 
 ##### exceutable permit ####
