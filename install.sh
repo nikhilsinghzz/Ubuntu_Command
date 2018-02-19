@@ -1,5 +1,10 @@
 #!/bin/bash
 
+######Adding User #########
+sudo adduser <NAME>
+
+
+
 ### install curl ##
 sudo apt-get update
 sudo apt-get install vim curl -y
