@@ -5,6 +5,11 @@ sudo apt-get update
 sudo apt-get install vim curl -y
 
 
+######## Zoom Player ######
+sudo apt-get update
+sudo apt-get install zoom-player
+
+
 ####Skype######
 echo "installing sype"
 sudo apt update
