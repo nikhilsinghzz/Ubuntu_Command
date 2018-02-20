@@ -1,0 +1,240 @@
+nikhil@nikhil:~/Downloads$ ssh -i "key_1.pem" root@ec2-52-211-205-10.eu-west-1.compute.amazonaws.com
+
+The authenticity of host 'ec2-52-211-205-10.eu-west-1.compute.amazonaws.com (52.211.205.10)' can't be established.
+ECDSA key fingerprint is SHA256:Tmm76VPhmw/tGkWbgPuwxIaICS8kCTYhAHI041GItGI.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'ec2-52-211-205-10.eu-west-1.compute.amazonaws.com,52.211.205.10' (ECDSA) to the list of known hosts.
+Please login as the user "ubuntu" rather than the user "root".
+
+Connection to ec2-52-211-205-10.eu-west-1.compute.amazonaws.com closed.
+nikhil@nikhil:~/Downloads$ ssh -i "key_1.pem" root@ec2-52-211-205-10.eu-west-1.compute.amazonaws.com
+Please login as the user "ubuntu" rather than the user "root".
+
+Connection to ec2-52-211-205-10.eu-west-1.compute.amazonaws.com closed.
+nikhil@nikhil:~/Downloads$ ssh -i "key_1.pem" root@ec2-52-211-205-10.eu-west-1.compute.amazonaws.com
+Please login as the user "ubuntu" rather than the user "root".
+
+Connection to ec2-52-211-205-10.eu-west-1.compute.amazonaws.com closed.
+nikhil@nikhil:~/Downloads$ google-authenticator^Cnikhil@nikhil:~/Downloads$ ssh -i "key_1.pem" ubantu@ec2-52-211-205-10.eu-west-1.compute.amazonaws.com
+Permission denied (publickey).
+nikhil@nikhil:~/Downloads$ ssh -i "key_1.pem" ubantu@ec2-52-211-205-10.eu-west-1.compute.amazonaws.com^C
+nikhil@nikhil:~/Downloads$ ssh -i "key_1.pem" ubuntu@ec2-52-211-205-10.eu-west-1.compute.amazonaws.com
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1049-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Tue Feb 20 07:21:17 2018 from 49.248.76.82
+ubuntu@ip-172-31-37-116:~$ lsblk
+NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0  10G  0 disk 
+└─xvda1 202:1    0  10G  0 part /
+ubuntu@ip-172-31-37-116:~$ ^C
+ubuntu@ip-172-31-37-116:~$ exit
+logout
+Connection to ec2-52-211-205-10.eu-west-1.compute.amazonaws.com closed.
+nikhil@nikhil:~/Downloads$ aws configure
+The program 'aws' is currently not installed. You can install it by typing:
+sudo apt install awscli
+nikhil@nikhil:~/Downloads$ lsusb 
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 005: ID 138a:0011 Validity Sensors, Inc. VFS5011 Fingerprint Reader
+Bus 001 Device 004: ID 04f2:b5c0 Chicony Electronics Co., Ltd 
+Bus 001 Device 003: ID 0cf3:e500 Atheros Communications, Inc. 
+Bus 001 Device 002: ID 04ca:009b Lite-On Technology Corp. 
+Bus 001 Device 009: ID 047f:c025 Plantronics, Inc. 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+nikhil@nikhil:~/Downloads$ ssh -i key_1.pem ec2-user@34.252.125.159
+The authenticity of host '34.252.125.159 (34.252.125.159)' can't be established.
+ECDSA key fingerprint is SHA256:g2B70cN9/9cE4IfVQWBi6a9yGsB/JHWXdDERiqnyiw4.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '34.252.125.159' (ECDSA) to the list of known hosts.
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2017.09-release-notes/
+4 package(s) needed for security, out of 5 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-15-8 ~]$ 
+[ec2-user@ip-172-31-15-8 ~]$ exit
+logout
+Connection to 34.252.125.159 closed.
+nikhil@nikhil:~/Downloads$ ssh -i key_1.pem ec2-user@34.243.2.145
+^C
+nikhil@nikhil:~/Downloads$ ssh -i key_1.pem ec2-user@34.243.2.145
+^C
+nikhil@nikhil:~/Downloads$ ssh -i key_1.pem ec2-user@34.243.2.145
+^C
+nikhil@nikhil:~/Downloads$ ssh -i key_1.pem ec2-user@34.252.125.159
+Last login: Tue Feb 20 13:48:28 2018 from 49.248.76.82
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2017.09-release-notes/
+4 package(s) needed for security, out of 5 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-15-8 ~]$ cat key_1.pem
+cat: key_1.pem: No such file or directory
+[ec2-user@ip-172-31-15-8 ~]$ nano key_1.pem
+[ec2-user@ip-172-31-15-8 ~]$ chmod 400 key_1.pem 
+[ec2-user@ip-172-31-15-8 ~]$ ssh -i key_1.pem ec2-user@172.31.20.39
+The authenticity of host '172.31.20.39 (172.31.20.39)' can't be established.
+ECDSA key fingerprint is SHA256:H3CKv9Y7EKn1Od/QP5512eOOLWQiruqIiDGkrWldWWI.
+ECDSA key fingerprint is MD5:d7:7c:6a:ed:d9:78:5b:60:82:bc:23:87:6e:57:7d:7d.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '172.31.20.39' (ECDSA) to the list of known hosts.
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2017.09-release-notes/
+[ec2-user@ip-172-31-20-39 ~]$ ping google.com
+PING google.com (209.85.203.102) 56(84) bytes of data.
+^C
+--- google.com ping statistics ---
+7 packets transmitted, 0 received, 100% packet loss, time 6120ms
+
+[ec2-user@ip-172-31-20-39 ~]$ sudo apt-get install vim
+sudo: apt-get: command not found
+[ec2-user@ip-172-31-20-39 ~]$ sudo ap^Cget install vim
+[ec2-user@ip-172-31-20-39 ~]$ sudo yum install vim
+Loaded plugins: priorities, update-motd, upgrade-helper
+^C
+
+Exiting on user cancel
+[ec2-user@ip-172-31-20-39 ~]$ sudo yum install vim
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                                                                                                                                            | 2.1 kB  00:00:00     
+amzn-updates                                                                                                                                                                         | 2.5 kB  00:00:00     
+(1/5): amzn-main/latest/group_gz                                                                                                                                                     | 4.4 kB  00:00:00     
+(2/5): amzn-updates/latest/group_gz                                                                                                                                                  | 4.4 kB  00:00:00     
+(3/5): amzn-updates/latest/updateinfo                                                                                                                                                | 458 kB  00:00:00     
+(4/5): amzn-main/latest/primary_db                                                                                                                                                   | 3.8 MB  00:00:00     
+(5/5): amzn-updates/latest/primary_db                                                                                                                                                | 785 kB  00:00:00     
+Package 2:vim-enhanced-8.0.0503-1.45.amzn1.x86_64 already installed and latest version
+Nothing to do
+[ec2-user@ip-172-31-20-39 ~]$ exit
+logout
+Connection to 172.31.20.39 closed.
+[ec2-user@ip-172-31-15-8 ~]$ exit
+logout
+Connection to 34.252.125.159 closed.
+nikhil@nikhil:~/Downloads$ ssh -i key_1.pem ec2-user@34.244.123.180
+The authenticity of host '34.244.123.180 (34.244.123.180)' can't be established.
+ECDSA key fingerprint is SHA256:mLuxmNTJGFXBcNKsetTqV9ScX+l/yr6zLVWl1eUcw6g.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '34.244.123.180' (ECDSA) to the list of known hosts.
+ _____ _           _   _      ____                       _        _ _
+| ____| | __ _ ___| |_(_) ___| __ )  ___  __ _ _ __  ___| |_ __ _| | | __
+|  _| | |/ _` / __| __| |/ __|  _ \ / _ \/ _` | '_ \/ __| __/ _` | | |/ /
+| |___| | (_| \__ \ |_| | (__| |_) |  __/ (_| | | | \__ \ || (_| | |   <
+|_____|_|\__,_|___/\__|_|\___|____/ \___|\__,_|_| |_|___/\__\__,_|_|_|\_\
+                                       Amazon Linux AMI
+
+This EC2 instance is managed by AWS Elastic Beanstalk. Changes made via SSH 
+WILL BE LOST if the instance is replaced by auto-scaling. For more information 
+on customizing your Elastic Beanstalk environment, see our documentation here: 
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-containers-ec2.html
+[ec2-user@ip-172-31-20-217 ~]$ sudo service httpd start
+Equivalent Upstart operations: start httpd, stop httpd, restart httpd, status httpd
+Starting httpd
+httpd start/running, process 4105
+[OK]
+[ec2-user@ip-172-31-20-217 ~]$ ps -ef | grep httpd
+ec2-user  4198  4069  0 14:30 pts/0    00:00:00 grep --color=auto httpd
+[ec2-user@ip-172-31-20-217 ~]$ cd /var/www/html/
+[ec2-user@ip-172-31-20-217 html]$ ls -ltr
+total 4
+drwxr-xr-x 4 webapp webapp 4096 May  2  2017 simple-php-website-master
+[ec2-user@ip-172-31-20-217 html]$ cd simple-php-website-master/
+[ec2-user@ip-172-31-20-217 simple-php-website-master]$ ll
+total 24
+-rw-r--r-- 1 webapp webapp  544 May  2  2017 config.php
+drwxr-xr-x 2 webapp webapp 4096 May  2  2017 content
+-rw-r--r-- 1 webapp webapp 1352 May  2  2017 functions.php
+-rw-r--r-- 1 webapp webapp   62 May  2  2017 index.php
+-rw-r--r-- 1 webapp webapp  937 May  2  2017 readme.md
+drwxr-xr-x 2 webapp webapp 4096 May  2  2017 template
+[ec2-user@ip-172-31-20-217 simple-php-website-master]$ cd /var/log/
+[ec2-user@ip-172-31-20-217 log]$ ls -ltr
+total 336
+-rw-r--r-- 1 root    root     23281 Feb 20 14:16 dmesg
+-rw------- 1 root    root         0 Feb 20 14:16 spooler
+-rw------- 1 root    root         0 Feb 20 14:16 boot.log
+drwxr--r-x 3 root    root      4096 Feb 20 14:16 amazon
+-rw------- 1 root    root       195 Feb 20 14:16 maillog
+-rw-r--r-- 1 root    root      2636 Feb 20 14:16 cloud-init-output.log
+-rw-r--r-- 1 root    root         0 Feb 20 14:16 eb-cfn-init-call.log
+-rw-r--r-- 1 root    root       586 Feb 20 14:16 cfn-hup.log
+-rw------- 1 root    root       141 Feb 20 14:16 yum.log
+drwxr-xr-x 2 root    root      4096 Feb 20 14:16 rotated
+-rw-r--r-- 1 root    root     69554 Feb 20 14:16 cloud-init.log
+-rw-r--r-- 1 root    root     20664 Feb 20 14:16 eb-cfn-init.log
+drwxr-xr-x 3 healthd healthd   4096 Feb 20 14:16 healthd
+drwxr-xr-x 4 webapp  webapp    4096 Feb 20 14:16 httpd
+-rw-r--r-- 1 root    root      6544 Feb 20 14:21 cfn-init-cmd.log
+-rw-r--r-- 1 root    root      5276 Feb 20 14:21 cfn-init.log
+-rw-r--r-- 1 root    root      5731 Feb 20 14:24 cfn-wire.log
+-rw-r--r-- 1 root    root     21567 Feb 20 14:24 eb-commandprocessor.log
+-rw-r--r-- 1 root    root     50050 Feb 20 14:24 eb-activity.log
+-rw-r--r-- 1 root    root         0 Feb 20 14:25 eb-tools.log
+-rw-rw-r-- 1 root    utmp      3840 Feb 20 14:29 wtmp
+-rw-r--r-- 1 root    root    146584 Feb 20 14:29 lastlog
+-rw------- 1 root    root      1692 Feb 20 14:29 secure
+-rw------- 1 root    root      1980 Feb 20 14:30 cron
+-rw-r--r-- 1 root    root       886 Feb 20 14:30 eb-publish-logs.log
+-rw------- 1 root    root     68626 Feb 20 14:30 messages
+[ec2-user@ip-172-31-20-217 log]$ cd httpd/
+[ec2-user@ip-172-31-20-217 httpd]$ ls -ltr
+total 12
+drwxr-xr-x 2 webapp webapp 4096 Feb 20 14:16 rotated
+drwxr-xr-x 2 webapp webapp 4096 Feb 20 14:19 healthd
+-rw-r--r-- 1 webapp webapp 1209 Feb 20 14:20 access_log
+-rw-r--r-- 1 webapp webapp    0 Feb 20 14:29 error_log
+[ec2-user@ip-172-31-20-217 httpd]$ tail -f access_log 
+172.31.18.180 (49.248.76.82) - - [20/Feb/2018:14:19:20 +0000] "GET /robots.txt HTTP/1.1" 404 208 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36"
+172.31.18.180 (49.248.76.82) - - [20/Feb/2018:14:19:20 +0000] "GET / HTTP/1.1" 403 209 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36 encors/0.0.6"
+172.31.18.180 (49.248.76.82) - - [20/Feb/2018:14:19:20 +0000] "GET /favicon.ico HTTP/1.1" 404 209 "http://myfirstelasticbeans-env-php.eu-west-1.elasticbeanstalk.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36 encors/0.0.6"
+::1 (-) - - [20/Feb/2018:14:20:19 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:20:20 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:20:21 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:20:50 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+172.31.18.55 (49.248.76.82) - - [20/Feb/2018:14:42:28 +0000] "GET / HTTP/1.1" 200 941 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36 encors/0.0.6"
+172.31.18.55 (49.248.76.82) - - [20/Feb/2018:14:42:28 +0000] "GET /robots.txt HTTP/1.1" 404 208 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36"
+172.31.18.55 (49.248.76.82) - - [20/Feb/2018:14:42:28 +0000] "GET /assets/css/bootstrap.min.css HTTP/1.1" 200 103314 "http://myfirstelasticbeans-env-php.eu-west-1.elasticbeanstalk.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36 encors/0.0.6"
+172.31.18.55 (49.248.76.82) - - [20/Feb/2018:14:42:29 +0000] "GET /robots.txt HTTP/1.1" 404 208 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36"
+172.31.18.55 (49.248.76.82) - - [20/Feb/2018:14:42:29 +0000] "GET /assets/css/bootstrap-responsive.min.css HTTP/1.1" 200 16553 "http://myfirstelasticbeans-env-php.eu-west-1.elasticbeanstalk.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36 encors/0.0.6"
+::1 (-) - - [20/Feb/2018:14:43:04 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:05 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:28 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:29 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:30 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:31 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:32 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:33 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:34 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:35 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:43:36 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+::1 (-) - - [20/Feb/2018:14:44:12 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.27 (Amazon) (internal dummy connection)"
+
+Broadcast message from root@ip-172-31-20-217
+	(unknown) at 14:44 ...
+
+The system is going down for power off NOW!
+Connection to 34.244.123.180 closed by remote host.
+Connection to 34.244.123.180 closed.
+nikhil@nikhil:~/Downloads$ 
