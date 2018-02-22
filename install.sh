@@ -1,5 +1,8 @@
 #!/bin/bash
 
+##############################################
+sudo apt-get install vim -y
+
 ######Adding User #########
 sudo adduser <NAME>
 
