@@ -13,9 +13,12 @@ sudo apt-get update
 sudo apt-get install vim curl -y
 
 
-######## Zoom Player ######
+######## Zoom (you can add wget before download links) ######
 sudo apt-get update
-sudo apt-get install zoom-player
+wget https://zoom.us/client/latest/zoom_amd64.deb   
+sudo dpkg -i zoom_2.0.52458.0531_amd64.deb
+sudo apt-get -f install
+
 
 
 ####Skype######
@@ -74,11 +77,14 @@ sudo apt-get update
 sudo apt-get install sublime-text
 
 
-######install firefox #####
+###########To install  composer ############ 
+curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer && chmod +x /usr/local/bin/composer
 
-sudo apt-add-repository ppa:ubuntu-mozilla-daily/ppa -y
-sudo apt-get update
+################To install Node.js ##################
+wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz -P /usr/local/
+tar -xvf /usr/local/node-v* -C /usr/local/
+ln -s /usr/local/node-v*/bin/node /usr/bin/node
+ln -s /usr/local/node-v*/bin/npm /usr/bin/npm
 
-sudo apt-get install firefox
 
 
