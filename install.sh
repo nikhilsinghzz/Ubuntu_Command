@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+# Install Bleachbite
+wget https://download.bleachbit.org/bleachbit_1.12_all_ubuntu1604.deb
+sudo apt install gdebi
+sudo gdebi bleachbit_1.12_all_ubuntu1604.deb
+sudo gdebi bleachbit_1.12*.deb
+
 #downlaoding Filezilla 
 apt-get -f install
 sudo apt-get -f install
