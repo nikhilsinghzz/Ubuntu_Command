@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+# Downlaoding Xammp 
+wget https://www.apachefriends.org/xampp-files/5.6.20/xampp-linux-x64-5.6.20-0-installer.run
+sudo su
+chmod +x xampp-linux-x64-5.6.20-0-installer.run
+./xampp-linux-x64-5.6.20-0-installer.run
+
 # Downloading and installing latest teamviewer
 
 sudo apt-get update
