@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#downlaoding Filezilla 
+apt-get -f install
+sudo apt-get -f install
+sudo apt install filezilla
+
+
 
 # Downlaoding Xammp 
 wget https://www.apachefriends.org/xampp-files/5.6.20/xampp-linux-x64-5.6.20-0-installer.run
