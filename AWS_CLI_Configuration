@@ -1,0 +1,26 @@
+############### Install python #############
+sudo apt install python-pip
+
+####### check paython version ########
+pip --version
+
+
+#####network DNS check #####
+nslookup google.com
+
+
+######### aws installation #######3
+sudo apt install awscli#
+
+######### Configure AWS account ########
+aws configure 
+
+####### Aws Regions #####
+aws ec2 describe-regions
+
+######## Region on table ########
+aws ec2 describe-regions --output table
+
+
+####### Check the AWS account info ####
+cat ~/.aws/config
