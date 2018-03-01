@@ -1,0 +1,76 @@
+nikhil@nikhil:~$ sudo service apache2 start
+nikhil@nikhil:~$ cd /etc/apache2/
+nikhil@nikhil:/etc/apache2$ cd sites-available/
+nikhil@nikhil:/etc/apache2/sites-available$ ll
+total 20
+drwxr-xr-x 2 root root 4096 Feb 28 17:15 ./
+drwxr-xr-x 8 root root 4096 Feb 28 17:15 ../
+-rw-r--r-- 1 root root 1332 Mar 19  2016 000-default.conf
+-rw-r--r-- 1 root root 6338 Apr  6  2016 default-ssl.conf
+nikhil@nikhil:/etc/apache2/sites-available$ vi 000-default.conf 
+nikhil@nikhil:/etc/apache2/sites-available$ sudo cp 000-default.conf 001-default.conf 
+nikhil@nikhil:/etc/apache2/sites-available$ vi 001-default.conf 
+nikhil@nikhil:/etc/apache2/sites-available$ sudo vi 001-default.conf 
+nikhil@nikhil:/etc/apache2/sites-available$ sudo service apache2 restart
+nikhil@nikhil:/etc/apache2/sites-available$ ls -l
+total 16
+-rw-r--r-- 1 root root 1332 Mar 19  2016 000-default.conf
+-rw-r--r-- 1 root root 1337 Feb 28 17:20 001-default.conf
+-rw-r--r-- 1 root root 6338 Apr  6  2016 default-ssl.conf
+nikhil@nikhil:/etc/apache2/sites-available$ vi 001-default.conf 
+nikhil@nikhil:/etc/apache2/sites-available$ vi 001-default.conf 
+nikhil@nikhil:/etc/apache2/sites-available$ sudo a2ensite 000-default.conf 
+Site 000-default already enabled
+nikhil@nikhil:/etc/apache2/sites-available$ sudo a2ensite 001-default.conf 
+Enabling site 001-default.
+To activate the new configuration, you need to run:
+  service apache2 reload
+nikhil@nikhil:/etc/apache2/sites-available$ sudo service apache2 reload
+nikhil@nikhil:/etc/apache2/sites-available$ sudo a2ensite 001-default.conf 
+Site 001-default already enabled
+nikhil@nikhil:/etc/apache2/sites-available$ cd /var/www/
+nikhil@nikhil:/var/www$ ll
+total 16
+drwxr-xr-x  4 root root 4096 Feb 28 17:18 ./
+drwxr-xr-x 15 root root 4096 Feb 28 17:14 ../
+drwxr-xr-x  2 root root 4096 Feb 28 17:15 html/
+drwxr-xr-x  2 root root 4096 Feb 28 17:18 nikhil/
+nikhil@nikhil:/var/www$ cd nikhil/
+nikhil@nikhil:/var/www/nikhil$ ll
+total 12
+drwxr-xr-x 2 root root 4096 Feb 28 17:18 ./
+drwxr-xr-x 4 root root 4096 Feb 28 17:18 ../
+-rw-r--r-- 1 root root   32 Feb 28 17:18 index.html
+nikhil@nikhil:/var/www/nikhil$ cd ..
+nikhil@nikhil:/var/www$ cd /etc/apache2/
+nikhil@nikhil:/etc/apache2$ ll
+total 96
+drwxr-xr-x   8 root root  4096 Feb 28 17:15 ./
+drwxr-xr-x 135 root root 12288 Feb 28 17:14 ../
+-rw-r--r--   1 root root  7115 Mar 19  2016 apache2.conf
+drwxr-xr-x   2 root root  4096 Feb 28 17:14 conf-available/
+drwxr-xr-x   2 root root  4096 Feb 28 17:15 conf-enabled/
+-rw-r--r--   1 root root  1782 Mar 19  2016 envvars
+-rw-r--r--   1 root root 31063 Mar 19  2016 magic
+drwxr-xr-x   2 root root 12288 Feb 28 17:15 mods-available/
+drwxr-xr-x   2 root root  4096 Feb 28 17:15 mods-enabled/
+-rw-r--r--   1 root root   320 Mar 19  2016 ports.conf
+drwxr-xr-x   2 root root  4096 Feb 28 17:20 sites-available/
+drwxr-xr-x   2 root root  4096 Feb 28 17:24 sites-enabled/
+nikhil@nikhil:/etc/apache2$ cd sites-available/
+nikhil@nikhil:/etc/apache2/sites-available$ ll
+total 24
+drwxr-xr-x 2 root root 4096 Feb 28 17:20 ./
+drwxr-xr-x 8 root root 4096 Feb 28 17:15 ../
+-rw-r--r-- 1 root root 1332 Mar 19  2016 000-default.conf
+-rw-r--r-- 1 root root 1337 Feb 28 17:20 001-default.conf
+-rw-r--r-- 1 root root 6338 Apr  6  2016 default-ssl.conf
+nikhil@nikhil:/etc/apache2/sites-available$ vi 001-default.conf 
+nikhil@nikhil:/etc/apache2/sites-available$ vi 001-default.conf 
+
+[1]+  Stopped                 vi 001-default.conf
+nikhil@nikhil:/etc/apache2/sites-available$ sudo service apache2 reload
+[sudo] password for nikhil: 
+nikhil@nikhil:/etc/apache2/sites-available$ $ java -version 
+$: command not found
+nikhil@nikhil:/etc/apache2/sites-available$ 
