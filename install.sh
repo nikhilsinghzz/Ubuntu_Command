@@ -121,7 +121,7 @@ echo " installing php7.2"
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 sudo apt-get install php7.2-cli -y
-
+sudo apt-get install php-pear php7.2-curl php7.2-dev php7.2-gd php7.2-mbstring php7.2-zip php7.2-mysql php7.2-xml
 ####Installing Sublime #####
 echo " installing sublime"
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - 
