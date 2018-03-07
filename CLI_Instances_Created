@@ -1,0 +1,4 @@
+############ instances created #########
+aws ec2 run-instances --image-id ami-f2d3638a  --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-f84d3787  --subnet-id subnet-1de00b56 --region us-west-2
+
+############
