@@ -18,6 +18,7 @@ mkdir dev
 ####### Clone ALL required Repos ######
 #### git clone PMANAGER2
 #### git clone SSO server
+#### git clone website2
 #### git clone Docker Development
 
 
