@@ -9,7 +9,7 @@ VPC
 ####### Create New Elastic ip  Fomration ######
 
 ####### Login to Insatnace ##########
-ssh -i aws-prod.pem ubuntu@52.49.252.218
+ssh -i aws-prod.pem ubuntu@XX.XX.XXX.XX
 
 ###### Make "dev" directory #####
 mkdir dev
