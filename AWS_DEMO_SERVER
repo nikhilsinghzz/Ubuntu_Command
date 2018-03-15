@@ -131,8 +131,18 @@ root@b4d4649d56fd:/# psql -U docker -W sso
 Note Passowrd required :- 
 
 
+#### DB entry for URL re direction #####
+SELECT * from client;
+
+####now run these commnads to URL to be dirctioned ###################
+update client set redirect_uri='http://dev-legacy.djaplatform.com/staff/login' where id = 3;
+update client set redirect_uri='http://dev-legacy.djaplatform.com:8090/users/login' where id = 4;
+
+NOTE :- the number for ids could be anything.
 
 PS:- NOW RUN THE EXPECTED URLS (should run , and should pass the smoke test also).
+
+
 
 
 
