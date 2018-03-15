@@ -37,6 +37,13 @@ cd docker-development
 git branch
 docker-compose up -d --build
 
+##### it adds the logded in user to the docker groupo #######
+sudo usermod -a -G docker $USER
+
+and reboot
+
+
+
 ###### take php image iinside the folder ######
 /dev/docker-development$ docker exec -it pmanager.php bash
 
