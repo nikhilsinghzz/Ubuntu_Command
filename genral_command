@@ -3,7 +3,10 @@
  rm .install.sh.sw*
  
  
+ ######### To remove Folder/directory #######
+ rm -rf mydir/
 
+ 
 
 ######### setup install ######
 sudo apt-get install vim-y
