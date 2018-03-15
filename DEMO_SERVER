@@ -1,0 +1,130 @@
+########## Creating Server with SAME Architecture ##########
+Instance Type 
+Availibility Zone
+Security Groups 
+AMI ID 
+DNS 
+VPC
+
+####### Create New Elastic ip  Fomration ######
+
+####### Login to Insatnace ##########
+ssh -i aws-prod.pem ubuntu@52.49.252.218
+
+###### Make "dev" directory #####
+mkdir dev
+
+
+####### Clone ALL required Repos ######
+#### git clone PMANAGER2
+#### git clone SSO server
+#### git clone Docker Development
+
+
+###### Go inside the repo folders ,and switch current demo branch #######
+git branch
+git checkout demo22
+
+###### take pull request from demo22 #######
+git pull origin demo22
+
+Note :- Do same with remaining repos also 
+
+#### Git docker clone on DEV folder#######
+git clone https://nikhilsinghz@bitbucket.org/djalexander/docker-development.git
+cd docker-development
+git branch
+docker-compose up -d --build
+
+###### take php image iinside the folder ######
+/dev/docker-development$ docker exec -it pmanager.php bash
+
+
+####### PMANAGER build ######
+docker@f98b29fa1d26:/var/www/html$ composer install
+docker@f98b29fa1d26:/var/www/html$ php bin/console doctrine:migrations:migrate
+docker@f98b29fa1d26:/var/www/html$ php bin/console hautelook:fixtures:load -n
+docker@f98b29fa1d26:/var/www/html$ cd members-area
+docker@f98b29fa1d26:/var/www/html/members-area$ npm install 
+ng build --prod --build-optimizer --base-href /staff/ --deploy-url /staff/ --oh=media
+
+
+####### Leave Docker-development directory ######
+ubuntu@ip-172-16-9-167:~/dev/docker-development$ cd ..
+
+#### enter website2 ######
+ubuntu@ip-172-16-9-167:~/dev$ cd website2/
+
+
+###### Run .php bash ######
+ubuntu@ip-172-16-9-167:~/dev/website2$ docker exec -it website.php bash
+
+######## WEBSITE ######
+docker@5291bffd825b:/var/www/html$ composer install
+docker@5291bffd825b:/var/www/html$ cd client-area
+docker@5291bffd825b:/var/www/html/client-area$ npm install
+docker@5291bffd825b:/var/www/html/client-area$ ng build --prod --build-optimizer --base-href /users/ --deploy-url /users/ --oh=media
+
+
+############# SSO server #############
+ubuntu@ip-172-16-9-167:~/dev/website2$ docker exec -it sso.php bash
+docker@4a46a87ea945:/var/www/html$ composer install
+docker@4a46a87ea945:/var/www/html$ php bin/console doctrine:migrations:migrate
+docker@4a46a87ea945:/var/www/html$ php bin/console doctrine:fixtures:load -n 
+
+docker@4a46a87ea945:/var/www/html$ exit
+
+
+
+
+####### Spin PHP image #########
+ubuntu@ip-172-16-9-167:~/dev/website2$ docker exec -it pmanager.php bash
+docker@f98b29fa1d26:/var/www/html$ ls -la
+docker@f98b29fa1d26:/var/www/html$ vi .env
+
+### exit from PHP docker image #####
+docker@f98b29fa1d26:/var/www/html$ exit
+
+##### visit website2 .env shell script #######
+ubuntu@ip-172-16-9-167:~/dev/website2$ vi .env
+
+### use this if not readable ######
+ubuntu@ip-172-16-9-167:~/dev/website2$ ls -la
+
+ubuntu@ip-172-16-9-167:~/dev/website2$ vi .env
+Note :- Modify all the URLS inside the shell script, whhich your modifying it.
+
+###### modification inside ssoserver environmnet shell script #####
+ubuntu@ip-172-16-9-167:~/dev$ cd ssoserver/
+ubuntu@ip-172-16-9-167:~/dev/ssoserver$ vi .env
+ubuntu@ip-172-16-9-167:~/dev/ssoserver$ cd ..
+
+
+##### modification inside pmanager2 environmnet shell script #####
+ubuntu@ip-172-16-9-167:~/dev$ cd pmanager2/
+ubuntu@ip-172-16-9-167:~/dev/pmanager2$ vi .env
+ubuntu@ip-172-16-9-167:~/dev/pmanager2$ cd ..
+
+
+#####Doceker Down #####
+ubuntu@ip-172-16-9-167:~/dev/docker-development$ docker-compose down
+
+
+####### modify docker-compose.yml shell script ######
+ubuntu@ip-172-16-9-167:~/dev/docker-development$ vi docker-compose.yml 
+
+########### Docker Build #########3
+ubuntu@ip-172-16-9-167:~/dev/docker-development$ docker-compose up -d --build
+
+######## sync DB ##############
+ubuntu@ip-172-16-9-167:~/dev/ssoserver$ docker exec -it sso.db bash
+root@b4d4649d56fd:/# psql -U docker -W sso
+Note Passowrd required :- 
+
+
+
+PS:- NOW RUN THE EXPECTED URLS (should run , and should pass the smoke test also).
+
+
+
+
