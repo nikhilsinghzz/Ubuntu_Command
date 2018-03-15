@@ -72,7 +72,8 @@ docker@5291bffd825b:/var/www/html$ composer install
 docker@5291bffd825b:/var/www/html$ cd client-area
 docker@5291bffd825b:/var/www/html/client-area$ npm install
 docker@5291bffd825b:/var/www/html/client-area$ ng build --prod --build-optimizer --base-href /users/ --deploy-url /users/ --oh=media
-
+  
+NOTE :- sometimes build gets failed , so in that scenarios simply remove the old conflicted folders (ex :- node_modules ,package-lock.json ) 
 
 ############# SSO server #############
 ubuntu@ip-172-16-9-167:~/dev/website2$ docker exec -it sso.php bash
