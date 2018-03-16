@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo adduser
+
 
 # Install Bleachbite
 wget https://download.bleachbit.org/bleachbit_1.12_all_ubuntu1604.deb
