@@ -68,63 +68,41 @@ docker@76770c038b4f:/var/www/html$ git branch
 * PMAN-877
   demo22
   master
-  
+ 
+ 
+ ###### exit from container #######
 docker@76770c038b4f:/var/www/html$ exit
-exit
+
+########## Re visit the container ######
 ubuntu@ip-172-16-8-237:~/dev/docker-development$ docker exec -it pmanager.php bash
 docker@51d10cdb85d2:/var/www/html$ git branch
 * demo22
   master
+  
+  ######### swithc to required branch ##########
 docker@51d10cdb85d2:/var/www/html$ git checkout PMAN-877
-M	members-area/package-lock.json
-Branch PMAN-877 set up to track remote branch PMAN-877 from origin.
-Switched to a new branch 'PMAN-877'
+
+
+######## check if it is correct #####
 docker@51d10cdb85d2:/var/www/html$ git branch
 * PMAN-877
   demo22
   master
+  
+###### exit from current container #######
 docker@51d10cdb85d2:/var/www/html$ exit     
-exit
+
+####### composer install (repeat AMIT sir steps ##############
 ubuntu@ip-172-16-8-237:~/dev/docker-development$ docker exec -it website.php bash
 docker@76770c038b4f:/var/www/html$ composer install
-Loading composer repositories with package information
-Installing dependencies (including require-dev) from lock file
-Nothing to install or update
-Generating autoload files
-Executing script cache:clear [OK]
-Executing script assets:install --symlink --relative public [OK]
 
 docker@76770c038b4f:/var/www/html$ cd client-area
 docker@76770c038b4f:/var/www/html/client-area$ ng build --prod --build-optimizer --base-href /users/ --deploy-url /users/ --oh=media
-Your global Angular CLI version (1.7.3) is greater than your local
-version (1.5.0). The local Angular CLI version is used.
-
-To disable this warning use "ng set --global warnings.versionMismatch=false".
-Date: 2018-03-16T09:50:23.740Z                                                          
-Hash: 7d83b371c4d3ef7139ea
-Time: 90200ms
-chunk {0} 0.chunk.js () 3.2 kB  [rendered]
-chunk {1} 1.chunk.js () 3.41 kB  [rendered]
-chunk {2} main.bundle.js (main) 1.6 MB [initial] [rendered]
-chunk {3} polyfills.bundle.js (polyfills) 188 kB [initial] [rendered]
-chunk {4} styles.bundle.css (styles) 244 kB [initial] [rendered]
-chunk {5} inline.bundle.js (inline) 1.37 kB [entry] [rendered]
 docker@76770c038b4f:/var/www/html/client-area$ exit
 exit
 ubuntu@ip-172-16-8-237:~/dev/docker-development$ docker exec -it pmanager.php bash
 docker@51d10cdb85d2:/var/www/html$ composer install
 Loading composer repositories with package information
-Installing dependencies (including require-dev) from lock file
-
-Prefetching 2 packages 🎶
-  - Downloading (100%)
-
-Package operations: 0 installs, 2 updates, 0 removals
-  - Updating symfony/filesystem (v4.0.4 => v4.0.6): Loading from cache
-  - Updating symfony/config (v4.0.4 => v4.0.6): Loading from cache
-Generating autoload files
-ocramius/package-versions:  Generating version class...
-ocramius/package-versions: ...done generating version class
 Executing script cache:clear [OK]
 Executing script assets:install --symlink --relative public [OK]
 
@@ -134,7 +112,7 @@ docker@51d10cdb85d2:/var/www/html$ php bin/console doctrine:migrations:migrate
                                                               
 
 No migrations to execute.
-docker@51d10cdb85d2:/var/www/html$ php bin/console hautelook:fixtures:load -n
+docker@51d10cdb85d2:/var/www/html$ php bin/console hautelook:
 docker@51d10cdb85d2:/var/www/html$ cd members-area
 docker@51d10cdb85d2:/var/www/html/members-area$ npm install 
 npm WARN @angular/cdk@6.0.0-beta.4-5e5066a requires a peer of @angular/core@>=6.0.0-beta.0 <7.0.0 but none is installed. You must install peer dependencies yourself.
