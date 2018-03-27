@@ -1,0 +1,109 @@
+Pre-requiset :- 
+creaste :- ec2 and RDS having same DNS REGION and Security Groups.
+visit Security groups and set settinmg for PORT (5432) for same security groups 
+
+
+
+############to comunicate with db ststtus ########
+telnet nikhildb.ciwhy4fp1jxa.eu-west-1.rds.amazonaws.com 5432
+Trying 172.31.20.151...
+Connected to nikhildb.ciwhy4fp1jxa.eu-west-1.rds.amazonaws.com.
+Escape character is '^]'.
+^]
+telnet> quit
+Connection closed.
+
++++++++++++++++++
+ubuntu@ip-172-31-18-159:~$ sudo apt-get install postgresql postgresql-contrib
++++++++++++++++++
+
+########3 Connet To data base ########3
+ubuntu@ip-172-31-18-159:~$ psql -h nikhildb.ciwhy4fp1jxa.eu-west-1.rds.amazonaws.com  -U nikhilsinghz postgres -W
+Password for user nikhilsinghz:
+
+################# to check the exiting databases #########
+postgres=> \l
+
+##############add user , database and prevelages ########
+postgres=> CREATE DATABASE website;
+CREATE DATABASE
+postgres=> CREATE DATABASE pmanager;
+CREATE DATABASE
+postgres=> CREATE DATABASE sso;
+CREATE DATABASE
+postgres=> CREATE USER djawebsite WITH PASSWORD 'website321';
+CREATE ROLE
+postgres=> CREATE USER djawebsite WITH PASSWORD 'website321';
+ERROR:  role "djawebsite" already exists
+postgres=> CREATE USER djapmanager WITH PASSWORD 'pmanager321';
+CREATE ROLE
+postgres=> CREATE USER djasso WITH PASSWORD 'sso321';
+CREATE ROLE
+postgres=> GRANT ALL PRIVILEGES ON DATABASE "website" to djawebsite;
+GRANT
+postgres=> GRANT ALL PRIVILEGES ON DATABASE "pmanager" to djapmanager;
+GRANT
+postgres=> GRANT ALL PRIVILEGES ON DATABASE "sso" to djasso;
+GRANT
+postgres=> \l
+
+################################################3
+postgres=> \q
+ubuntu@ip-172-31-18-159:~$ psql -h nikhildb.ciwhy4fp1jxa.eu-west-1.rds.amazonaws.com  -U nikhilsinghz postgres -W
+Password for user nikhilsinghz: 
+psql: FATAL:  password authentication failed for user "nikhilsinghz"
+FATAL:  password authentication failed for user "nikhilsinghz"
+ubuntu@ip-172-31-18-159:~$ psql -h nikhildb.ciwhy4fp1jxa.eu-west-1.rds.amazonaws.com  -U djapmanager pmanager -W
+Password for user djapmanager: 
+psql (9.5.12, server 9.6.6)
+WARNING: psql major version 9.5, server major version 9.6.
+         Some psql features might not work.
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
+
+pmanager=> /q
+pmanager-> \q
+ubuntu@ip-172-31-18-159:~$ psql -h nikhildb.ciwhy4fp1jxa.eu-west-1.rds.amazonaws.com  -U website  pmanager -W
+Password for user website: 
+psql: FATAL:  password authentication failed for user "website"
+FATAL:  password authentication failed for user "website"
+ubuntu@ip-172-31-18-159:~$ psql -h nikhildb.ciwhy4fp1jxa.eu-west-1.rds.amazonaws.com  -U djawebsite  pmanager -W
+Password for user djawebsite: 
+psql (9.5.12, server 9.6.6)
+WARNING: psql major version 9.5, server major version 9.6.
+         Some psql features might not work.
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
+
+pmanager=> CREATE TEMP TABLE tbl AS
+pmanager-> \l
+                                        List of databases
+   Name    |    Owner     | Encoding |   Collate   |    Ctype    |       Access privileges       
+-----------+--------------+----------+-------------+-------------+-------------------------------
+ pmanager  | nikhilsinghz | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =Tc/nikhilsinghz             +
+           |              |          |             |             | nikhilsinghz=CTc/nikhilsinghz+
+           |              |          |             |             | djapmanager=CTc/nikhilsinghz
+ postgres  | nikhilsinghz | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ rdsadmin  | rdsadmin     | UTF8     | en_US.UTF-8 | en_US.UTF-8 | rdsadmin=CTc/rdsadmin
+ sso       | nikhilsinghz | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =Tc/nikhilsinghz             +
+           |              |          |             |             | nikhilsinghz=CTc/nikhilsinghz+
+           |              |          |             |             | djasso=CTc/nikhilsinghz
+ template0 | rdsadmin     | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/rdsadmin                  +
+           |              |          |             |             | rdsadmin=CTc/rdsadmin
+ template1 | nikhilsinghz | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/nikhilsinghz              +
+           |              |          |             |             | nikhilsinghz=CTc/nikhilsinghz
+ website   | nikhilsinghz | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =Tc/nikhilsinghz             +
+           |              |          |             |             | nikhilsinghz=CTc/nikhilsinghz+
+           |              |          |             |             | djawebsite=CTc/nikhilsinghz
+(7 rows)
+
+pmanager-> \t
+Tuples only is on.
+pmanager-> \dt
+No relations found.
+pmanager-> BConnection to 176.34.137.48 closed by remote host.
+Connection to 176.34.137.48 closed.
+nikhil@nikhil:~/Downloads$ C
+
+
+
