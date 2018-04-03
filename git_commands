@@ -1,6 +1,17 @@
 /****** This is to clone Repository*****
  git clone https://github.com/nikhilsinghzz/Ubuntu_Command.git
 
+####### Clone Tips #########33
+Git Clone (if master and the commits are in different branch) 
+git fetch 
+git branch -a
+git checkout <Desired branch name>
+
+
+
+
+
+
 *** ENTER INSIDE THE FOLDER *****
 cd Ubuntu_Command/
 
