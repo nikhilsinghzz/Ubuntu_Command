@@ -1,0 +1,42 @@
+############# ssh to the machine #############
+As sso- demo 52.212.185.196
+
+##### Go inside the data base ###########
+psql -h demodbinstance.c8irfgmotewk.eu-west-1.rds.amazonaws.com -U admindjadb -W postgres
+
+
+########## And drop and up the data base ########3
+DROP database sso;
+DROP database pmanager;
+DROP database website;
+
+CREATE DATABASE website;
+CREATE DATABASE pmanager;
+CREATE DATABASE sso;
+
+GRANT ALL PRIVILEGES ON DATABASE "website" to djawebsite;
+GRANT ALL PRIVILEGES ON DATABASE "pmanager" to djapmanager;
+GRANT ALL PRIVILEGES ON DATABASE "sso" to djasso;
+
+######## Build process for Pman and sso #######
+Login to Pmanager elasticbeanstalk with ssh .
+
+and navigate to "cd /var/www/html"
+4)
+php bin/console doctrine:migrations:migrate -n
+5)
+php bin/console hautelook:fixtures:load -n -vvv --append
+
+Login to ssoserver elasticbeanstalk with ssh .
+and navigate to "cd /var/www/html"
+6)
+php bin/console doctrine:migrations:migrate
+7)
+php bin/console doctrine:fixtures:load -n -vvv
+
+
+
+###########switching to Pman data base ################3
+\connect pmanager
+
+######## enter credentials #########
