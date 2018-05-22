@@ -1,0 +1,32 @@
+############### Connect to Elast bean stalk server (pman-hay) #############
+ssh -i "aws-prod.pem" ec2-user@ec2-52-210-127-113.eu-west-1.compute.amazonaws.com
+
+
+########## with this URL you can login pmanager database###########
+psql -h demodbinstance.c8irfgmotewk.eu-west-1.rds.amazonaws.com -U djapmanager -W pmanteam
+
+password is :- pmanager321
+and you can check using 
+/dt 
+if ther any database tables 
+
+
+To Drop Create and Grant privillages to Database 
+############connect to any server Like Pmam-hay/pman-wave/pman-sso EBS serevr #######
+EX :- ssh -i "aws-prod.pem" ec2-user@ec2-52-210-127-113.eu-west-1.compute.amazonaws.com
+
+#######Login to database as Admin #############
+Login to Db:- psql -h demodbinstance.c8irfgmotewk.eu-west-1.rds.amazonaws.com -U admindjadb -W postgres
+
+###### Drop Database######
+DROP database pmanteam;
+
+##### Create Database #####
+CREATE database pmanteam;
+
+###### Grant Privillages #####
+GRANT ALL PRIVILEGES ON DATABASE "pmanteam" to djapmanager;
+
+############# Run Migration and Fitures  #############
+php bin/console doctrine:migrations:migrate -n
+php bin/console hautelook:fixtures:load -n -vvv --append
