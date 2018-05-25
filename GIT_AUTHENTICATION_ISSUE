@@ -1,0 +1,17 @@
+###########  cd .git
+ubuntu@ip-172-16-9-167:~/dev/website2/.git$ ls -l
+djadmin@ip-172-16-2-146:~/dev/pmanager2$ git pull origin 
+Password for 'https://dj-suraj@bitbucket.org': 
+remote: Empty password
+fatal: Authentication failed for 'https://dj-suraj@bitbucket.org/djalexander/pmanager2.git/'
+
+###### To Solve This #####
+dev/pmanager2$ cd .git
+
+########## Come inside git config file ##########
+/dev/pmanager2/.git$ vi config 
+
+
+PS :- Modify the the url and done 
+
+Thanks 
