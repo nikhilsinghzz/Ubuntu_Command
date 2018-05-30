@@ -1,0 +1,34 @@
+########### take the respective Branch pull and do eb init (EX :- take git cllone #########
+eb init 
+##### set region and application name ### (this is one time process ####
+###### Perform eblist to see the environment names ####
+eb list 
+
+EX :- 
+* web-demo
+web-hay1
+web-legacy
+web-wave
+web2-test
+
+###### eb use (to chagne the environment) #####
+
+eb use web2-test 
+
+### again do eb list to confirm the change environment ####
+This should be like this 
+EX :- 
+web-demo
+web-hay1
+web-legacy
+web-wave
+*web2-test
+
+###### now to check and see the environmental varialbes #####
+eb printenv
+
+PS:- this will show you all the saved Enviromentals variables 
+
+######### Now to set the new Environmental variables #######
+eb setenv
+
