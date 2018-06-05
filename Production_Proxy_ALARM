@@ -1,0 +1,39 @@
+############## Your Repo (Git) should be in Pmanager (production) ##############
+Note :- If required git clone 
+EX:- ~/dev$ git clone https://nikhilsinghz@bitbucket.org/djalexander/pmanager.git
+
+########### do eb init inside this folder ######
+dev/pmanager$ eb init
+
+
+###########Select region as 4 (Ireland) ########
+
+#### Select an application to use as 5 (pmanager) ########
+
+######## Select the default environment as (2) production #######
+Do you wish to continue with CodeCommit? (y/N) (default is n): n
+
+###### Do eb list to get the confirmation ####
+
+#########Now do eb ssh ############
+Note:- aws ssh keys should be in same folder 
+
+Select an instance to ssh into
+1) i-0449e32c9a0ca1390
+2) i-0d9d4f5f156fda017
+3) i-0726d080cf1d9f005
+4) i-0ec74024bd57de552
+
+
+Note :- we have to select 4 (To get the desired instance visit
+elastic beanstalk dashboard select pamanger --> production ---> Health ---> and 
+observer red coloured instance  (All Applications  pmanager  production ) .
+Note :- in this case ours instance is '4'.
+
+
+######### eb will login to same instance #### 
+ANd final step 
+### restart the servers ####
+
+[ec2-user@ip-172-31-37-237 ~]$ sudo service httpd restart
+
