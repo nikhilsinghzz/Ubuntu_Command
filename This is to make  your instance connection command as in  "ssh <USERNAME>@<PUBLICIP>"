@@ -1,0 +1,9 @@
+Steps :- Login to the desired instance usimng normal AWS commands and 
+vi /etc/ssh/sshd_config
+
+and Set
+PasswordAuthentication "yes"
+
+then later 
+save the vi file and 
+sudo service ssh restart
