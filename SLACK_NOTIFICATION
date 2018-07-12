@@ -1,0 +1,86 @@
+console.log('Loadingaction');
+
+var AWS = require("aws-sdk");
+var codepipeline = new AWS.CodePipeline();
+
+const https = require('https');
+const url = require('url');
+//const slack_url = 'https://hooks.slack.com/services/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';
+//const slack_url = 'https://hooks.slack.com/services/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';
+const slack_url ='https://hooks.slack.com/services/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';
+
+const slack_req_opts = url.parse(slack_url);
+slack_req_opts.method = 'POST';
+slack_req_opts.headers = {
+    'Content-Type': 'application/json'
+};
+
+exports.handler = function(event, context) {
+    console.log("Receivedt:", JSON.stringify(event, null, 2));
+    var eventText = null;
+    var jobId = null;
+    
+    if(event["CodePipeline.job"]){
+     eventText = event["CodePipeline.job"].data.actionConfiguration.configuration.UserParameters;
+    }else if(event["detail"]){
+     var status = event["detail"]["build-status"];   
+     var projectName = event["detail"]["project-name"]; 
+     eventText = "Production Environment : " + projectName + " is : "+ status;
+    }
+    
+    console.log("Receivedage:", eventText);
+    if(event["CodePipeline.job"]){
+    jobId = event["CodePipeline.job"].id;
+    }else if(event["detail"]){
+    jobId = event["id"]; 
+    }
+
+    var req = https.request(slack_req_opts, function(res) {
+        if (res.statusCode === 200) {
+            context.succeed('posted to slack');
+        } else {
+            context.fail('statuse: ' + res.statusCode);
+        }
+    });
+
+    req.on('error', function(e) {
+        console.log('problem request: ' + e.message);
+        context.fail(e.message);
+    });
+
+    var params = {
+        attachments: [{
+            fallback: eventText,
+            pretext: "Job ID :"+jobId,
+            color: "#D00000",
+            fields: [{
+                "value": eventText,
+                "short": false
+            }]
+        }]
+    };
+
+    req.write(JSON.stringify(params));
+
+    req.end();
+
+    if(event["CodePipeline.job"]){
+        // Notify AWS CodePipeline of a successful job
+        var putJobSuccess = function(message) {
+            var params = {
+                jobId: jobId
+            };
+            codepipeline.putJobSuccessResult(params, function(err, data) {
+                if (err) {
+                    context.fail(err);
+                } else {
+                    context.succeed(message);
+                }
+            });
+        };
+
+        // Succeed the job
+     putJobSuccess("Notification has been sent on Slack Channel.");
+    }
+    console.log("Process");
+}
