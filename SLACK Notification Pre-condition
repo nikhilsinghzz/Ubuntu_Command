@@ -1,0 +1,9 @@
+Section :- execution role :- Execution role
+Choose Existing Role as:-  "Lambda_Slack_Notification"
+Network:- No VPC 
+Concurrency :- "Use unreserved account concurrency"
+"Basic settings" :- "Send CodePipe Line Notification To slack" 
+Memory In mB :- 128
+Time out info :- 3 sec
+Debugging and error handling :- none 
+Enable active tracing :- uncheck
