@@ -1,0 +1,101 @@
+console.log('Loadingction');
+
+var AWS = require("aws-sdk");
+var codepipeline = new AWS.CodePipeline();
+
+const https = require('https');
+const url = require('url');
+
+//My slack Url
+const slack_url = 'https://hooks.slack.com/services/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';
+
+// Aanand's slack
+//const slack_url = 'https://hooks.slack.com/services/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';
+
+//Radhas's Slack
+//const slack_url = 'https://hooks.slack.com/services/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';
+
+const slack_req_opts = url.parse(slack_url);
+slack_req_opts.method = 'POST';
+slack_req_opts.headers = {
+    'Content-Type': 'application/json'
+};
+
+exports.handler = function(event, context) {
+    console.log("Receivedt:", JSON.stringify(event, null, 2));
+    var eventText = null;
+    var jobId = null;
+    var jobName = null;
+    
+    if(event["CodePipeline.job"]){
+        eventText = event["CodePipeline.job"].data.actionConfiguration.configuration.UserParameters;
+    }else if(event["detail"]){
+        var status = event["detail"]["build-status"];   
+        var projectName = event["detail"]["project-name"]; 
+        eventText = "Production Environment : " + projectName + " is : "+ status;
+    }
+    
+    console.log("Receivedage:", eventText);
+    if(event["CodePipeline.job"]){
+        jobId = event["CodePipeline.job"].id;
+    }else if(event["detail"]){
+        jobId = event["id"]; 
+    }
+    //  console.log("TESTING:", event["CodePipeline.job"].data.inputArtifacts[0]["location"].s3Location.objectKey.split("/").shift());
+    if(event["CodePipeline.job"]){
+        jobName = event["CodePipeline.job"].data.inputArtifacts[0]["location"].s3Location.objectKey.split("/").shift();
+    }else if(event["detail"]){
+        jobName = event["detail"]["project-name"];
+    }
+    console.log(jobName)
+    var req = https.request(slack_req_opts, function(res) {
+        if (res.statusCode === 200) {
+            context.succeed('posted to slack');
+        } else {
+            context.fail('statuse: ' + res.statusCode);
+        }
+    });
+
+    req.on('error', function(e) {
+        console.log('problemh request: ' + e.message);
+        context.fail(e.message);
+    });
+
+    var params = {
+        attachments: [{
+            fallback: eventText,
+            pretext: "Pipeline :"+jobName,
+            color: "#D00000",
+            fields: [{
+                "value": eventText,
+                "short": false
+            }]
+        }]
+    };
+
+    req.write(JSON.stringify(params));
+
+    req.end();
+
+    if(event["CodePipeline.job"]){
+        // Notify AWS CodePipeline of a successful job
+        var putJobSuccess = function(message) {
+            var params = {
+                jobId: jobId
+            };
+            codepipeline.putJobSuccessResult(params, function(err, data) {
+                if (err) {
+                    context.fail(err);
+                } else {
+                    context.succeed(message);
+                }
+            });
+        };
+
+        // Succeed the job
+     putJobSuccess("Notification has been sent on Slack Channel.");
+    }
+    console.log("Process");
+}
+
+
